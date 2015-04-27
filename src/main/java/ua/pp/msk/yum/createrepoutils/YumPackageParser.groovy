@@ -225,11 +225,12 @@ public class YumPackageParser
           return null
         }
         // requires a file included in rpm
-        if (item.name.startsWith('/') && fileNames.contains(item.name) && !item.flags) {
+        if (item.name.startsWith('/') && fileNames != null && fileNames.contains(item.name) && !item.flags) {
           return null
         }
         // require something the rpm provides
-        if (provideNames.containsKey(item.name)) {
+        
+                if (provideNames != null && provideNames.containsKey(item.name)) {
           if (!item.flags) {
             return null
           }
