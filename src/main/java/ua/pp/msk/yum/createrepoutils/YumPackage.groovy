@@ -20,7 +20,7 @@ import groovy.transform.ToString
  * @since 3.0
  */
 @ToString(includePackage = false, includeNames = true)
-class YumPackage
+public class YumPackage
 {
 
   String pkgId

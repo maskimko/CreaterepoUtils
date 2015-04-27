@@ -34,7 +34,7 @@ import static org.redline_rpm.header.Header.HeaderTag
  *
  * @since 3.0
  */
-class YumPackageParser
+public class YumPackageParser
 {
 
   /**
@@ -45,7 +45,7 @@ class YumPackageParser
    * @param lastModified last modified time of rpm file (in seconds)
    * @return parsed yum metadata
    */
-  YumPackage parse(final InputStream rpm, final String location, final long lastModified) {
+  public YumPackage parse(final InputStream rpm, final String location, final long lastModified) {
     YumPackage yumPackage = null
     def countingStream = new CountingInputStream(rpm)
     def digestStream = new DigestInputStream(countingStream, MessageDigest.getInstance('SHA-256'))
