@@ -25,7 +25,6 @@ import org.redline_rpm.header.Signature
 import java.nio.channels.Channels
 import java.security.DigestInputStream
 import java.security.MessageDigest
-
 import static org.redline_rpm.ChannelWrapper.Key
 import static org.redline_rpm.header.Header.HeaderTag
 
@@ -98,6 +97,7 @@ public class YumPackageParser
       pkgId = checksum
       sizePackage = countingStream.count
     }
+    
     return yumPackage
   }
 
